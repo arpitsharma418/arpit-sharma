@@ -13,7 +13,7 @@ function HeroSection() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true }}
-        className=" w-[80%] mx-auto flex flex-wrap-reverse justify-around mt-20 lg:mt-36"
+        className=" text-white w-[80%] mx-auto flex flex-wrap-reverse justify-around mt-20 lg:mt-36"
       >
         <motion.div
           initial={{ x: -300, opacity: 0 }}
@@ -30,7 +30,7 @@ function HeroSection() {
           </h1>
           <h1>
             I'm a{" "}
-            <span className="text-blue-700 bg-white p-2 rounded-lg">
+            <span className="text-blue-700 p-2 rounded-lg">
               <Typewriter
                 words={[
                   "Full-Stack Developer",

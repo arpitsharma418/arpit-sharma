@@ -44,13 +44,13 @@ function SkillSection() {
 
     // DevOps / Tools
     { icon: <FaGitAlt className="text-red-500" />, name: "Git" },
-    { icon: <FaGithub className="text-gray-800" />, name: "GitHub" },
+    { icon: <FaGithub className="text-black" />, name: "GitHub" },
     { icon: <SiRender className="text-indigo-500" />, name: "Render" },
   ];
 
   return (
     <>
-      <div className="w-[90%] mx-auto md:p-20 mt-20">
+      <div className="w-[90%] mx-auto md:p-20 mt-20 text-white">
         <motion.div
         initial={{opacity: 0, y: 200}}
         whileInView={{opacity: 1, y: 0}}

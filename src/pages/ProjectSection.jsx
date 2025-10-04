@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 function ProjectSection() {
   return (
     <>
-      <div className="mt-20 md:mt-0 w-[90%] mx-auto">
+      <div className="text-white mt-20 md:mt-0 w-[90%] mx-auto">
         <h1 className="lora-font text-5xl italic text-center">Projects</h1>
         <div className="mt-20 md:mt-0 space-y-10 md:space-y-0 md:p-20 flex justify-around flex-wrap">
           <ProjectCard
