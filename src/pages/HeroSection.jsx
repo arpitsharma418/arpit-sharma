@@ -13,7 +13,7 @@ function HeroSection() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true }}
-        className=" text-white w-[80%] mx-auto flex flex-wrap-reverse justify-around mt-20 lg:mt-36"
+        className="text-white w-[80%] mx-auto flex flex-wrap-reverse justify-around mt-20 lg:mt-32"
       >
         <motion.div
           initial={{ x: -300, opacity: 0 }}
@@ -22,15 +22,15 @@ function HeroSection() {
           viewport={{ once: true }}
           className="left w-full lg:w-xl my-auto lg:text-start text-center"
         >
-          <h1 className="text-7xl lora-font italic mb-10 mt-10 lg:mt-0">
-            Hey! I am
-            <div className="text-5xl lg:text-7xl mt-4 lg:mt-0">
+          <h1 className="text-3xl lg:text-7xl font-semibold mb-10 mt-10 lg:mt-0">
+            Hey! I'm
+            <div className="lg:text-7xl mt-4 lg:mt-0">
               Arpit Sharma
             </div>
           </h1>
           <h1>
             I'm a{" "}
-            <span className="text-blue-700 p-2 rounded-lg">
+            <span className="text-white p-2 rounded-lg">
               <Typewriter
                 words={[
                   "Full-Stack Developer",

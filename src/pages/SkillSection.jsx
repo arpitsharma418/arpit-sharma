@@ -50,7 +50,7 @@ function SkillSection() {
 
   return (
     <>
-      <div className="w-[90%] mx-auto md:p-20 mt-20 text-white">
+      <div className="text-white w-[90%] mx-auto md:p-20 mt-20">
         <motion.div
         initial={{opacity: 0, y: 200}}
         whileInView={{opacity: 1, y: 0}}

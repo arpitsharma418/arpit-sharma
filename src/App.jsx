@@ -10,9 +10,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <section id="home">
-        <HeroSection />
-      </section>
+      <HeroSection />
 
       <section id="about">
         <AboutSection />
@@ -25,7 +23,9 @@ function App() {
       <section id="projects">
         <ProjectSection />
       </section>
-      <Footer />
+      <section id="footer">
+        <Footer />
+      </section>
     </>
   );
 }

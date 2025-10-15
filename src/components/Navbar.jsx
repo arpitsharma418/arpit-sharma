@@ -1,136 +1,121 @@
-import OpenMenu from "@mui/icons-material/Menu";
+import React, { useState } from "react";
+import OpenMenu from "@mui/icons-material/MenuRounded";
 import CloseMenu from "@mui/icons-material/Close";
-import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleMenu = () => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
+    console.log(isOpen);
   };
 
   return (
     <>
-      <div className="p-3 top-0 fixed w-full flex justify-around bg-white">
+      <div className="w-full backdrop-blur-md flex justify-between items-center px-5 md:px-20 py-4 border-b-1 border-white/10 sticky top-0 z-40">
         <div>
-          <h1 className="py-1">Arpit's Portfolio</h1>
+          <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
+            Arpit Sharma
+          </h1>
         </div>
-        <div className="hidden lg:inline">
-          <ul className="flex space-x-10 ">
-            <li className="hover:bg-black/10 px-2 py-1 rounded-lg transition">
-              <Link
-                to="home"
-                smooth={true}
-                duration={600}
-                className="cursor-pointer"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="hover:bg-black/10 px-2 py-1 rounded-lg transition">
+        <div>
+          <div
+            className="md:hidden p-1 text-white cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {isOpen ? (
+              <CloseMenu sx={{ fontSize: "30px" }} />
+            ) : (
+              <OpenMenu sx={{ fontSize: "30px" }} />
+            )}
+          </div>
+          <ul className={`hidden md:flex space-x-8 text-gray-400 items-center`}>
+            <li key={1} className="hover:text-sky-500 transition">
               <Link
                 to="about"
                 smooth={true}
-                duration={600}
+                duration={500}
                 className="cursor-pointer"
               >
                 About
               </Link>
             </li>
-            <li className="hover:bg-black/10 px-2 py-1 rounded-lg transition">
-              <Link
-                to="skills"
-                smooth={true}
-                duration={600}
-                className="cursor-pointer"
-              >
-                Skills
-              </Link>
-            </li>
-            <li className="hover:bg-black/10 px-2 py-1 rounded-lg transition">
+            <li key={2} className="hover:text-sky-500 transition">
               <Link
                 to="projects"
                 smooth={true}
-                duration={600}
+                duration={500}
                 className="cursor-pointer"
               >
                 Projects
               </Link>
             </li>
-            <li className="hover:bg-black/10 px-2 py-1 rounded-lg transition">
+            <li key={3} className="hover:text-sky-500 transition">
               <Link
-                to="home"
+                to="skills"
                 smooth={true}
-                duration={600}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Skills
+              </Link>
+            </li>
+            <li
+              key={4}
+              className="hover:bg-sky-400 text-sky-400 hover:text-black transition p-2 border-2 border-sky-400 rounded-lg text-sm hidden md:inline cursor-pointer"
+            >
+              <Link to="footer" smooth={true} duration={500}  >Get in Touch</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        className={`fixed w-full backdrop-blur-md transition-all duration-300 ease ${
+          isOpen ? "top-[60px] opacity-100" : "top-[-100%] opacity-0"
+        } md:hidden z-40`}
+      >
+        <ul className="flex flex-col space-y-4 p-6">
+          <li className="hover:text-sky-500 transition text-white">
+            <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                About
+              </Link>
+          </li>
+          <li className="hover:text-sky-500 transition text-white">
+            <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Projects
+              </Link>
+          </li>
+          <li className="hover:text-sky-500 transition text-white">
+            <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Skills
+              </Link>
+          </li>
+          <li className="hover:text-sky-500 transition text-white">
+            <Link
+                to="footer"
+                smooth={true}
+                duration={500}
                 className="cursor-pointer"
               >
                 Contact
               </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="lg:hidden px-2 py-1">
-          {isOpen ? (
-            <CloseMenu onClick={handleMenu} />
-          ) : (
-            <OpenMenu onClick={handleMenu} />
-          )}
-        </div>
-      </div>
-      <div
-        className={`fixed top-0 mt-14 w-[100%] ${isOpen ? "inline" : "hidden"}`}
-      >
-        <ul className="bg-white p-2 space-y-3 text-center">
-          <li>
-            <Link
-              to="home"
-              smooth={true}
-              duration={600}
-              className="cursor-pointer"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="about"
-              smooth={true}
-              duration={600}
-              className="cursor-pointer"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="skills"
-              smooth={true}
-              duration={600}
-              className="cursor-pointer"
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="projects"
-              smooth={true}
-              duration={600}
-              className="cursor-pointer"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="home"
-              smooth={true}
-              duration={600}
-              className="cursor-pointer"
-            >
-              Contact
-            </Link>
           </li>
         </ul>
       </div>

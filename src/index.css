@@ -2,13 +2,9 @@
 
 body{
     /* background-color: #e3f2fd; */
-    background-color: #20201F;
+    /* background-color: #20201F; */
+    background-color: hsl(220 25% 10%)
 }
 body{
     font-family: "Inter", sans-serif;
-}
-
-.lora-font{
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
 }
