@@ -1,100 +1,60 @@
-import { Typewriter } from "react-simple-typewriter";
-import LinkedIn from "@mui/icons-material/LinkedIn";
-import GitHub from "@mui/icons-material/GitHub";
-import Download from "@mui/icons-material/Download";
-import Twitter from "@mui/icons-material/X";
-import { motion } from "motion/react";
+import React from "react";
+import { FiGithub } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
+import { TbMessage } from "react-icons/tb";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 function HeroSection() {
   return (
     <>
       <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="text-white w-[80%] mx-auto flex flex-wrap-reverse justify-around mt-20 lg:mt-32"
+        className="text-white min-h-[calc(100vh-72px)] flex flex-col justify-center items-center"
       >
-        <motion.div
-          initial={{ x: -300, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="left w-full lg:w-xl my-auto lg:text-start text-center"
-        >
-          <h1 className="text-3xl lg:text-7xl font-semibold mb-10 mt-10 lg:mt-0">
-            Hey! I'm
-            <div className="lg:text-7xl mt-4 lg:mt-0">
-              Arpit Sharma
-            </div>
-          </h1>
-          <h1>
-            I'm a{" "}
-            <span className="text-white p-2 rounded-lg">
-              <Typewriter
-                words={[
-                  "Full-Stack Developer",
-                  "MERN Stack Developer",
-                  "Frontend Developer",
-                  "Backend Developer",
-                  "Software Developer",
-                ]}
-                loop={6}
-                cursor
-                cursorStyle="_"
-                typeSpeed={100}
-                deleteSpeed={70}
-                delaySpeed={2000}
-              />
-            </span>{" "}
-          </h1>
-          <p className="mt-5">
-            I specialize in building web applications with the MERN Stack and
-            I’m currently strengthening my Data Structures & Algorithms skills
-            to write efficient, scalable code.
+        <div className="text-center w-[80%] lg:w-[38%]">
+          <p className="text-sky-300 mb-7 text-lg">Hi, my name is</p>
+          <h1 className="text-6xl font-bold mb-4">Arpit Sharma</h1>
+          <h2 className="text-4xl font-bold opacity-60">
+            I craft powerful web experiences
+          </h2>
+          <p className="mt-5 font-medium text-wrap leading-7">
+            I'm a full-stack developer student passionate about creating
+            beautiful, functional, web applications. Currently focused on
+            building responsive and accessible digital experiences.
           </p>
+        </div>
 
-          <div className="flex my-5 space-x-6 justify-center lg:justify-start">
-            <a
-              href="https://www.linkedin.com/in/arpitsharma418?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_blank"
-            >
-              <LinkedIn />
-            </a>
-            <a href="https://github.com/arpitsharma418" target="_blank">
-              <GitHub />
-            </a>
-            <a href="#">
-              <Twitter />
-            </a>
-            <a href="https://leetcode.com/u/arpitsharma418/" target="_blank">
-              <img
-                src="Images/leetcode.png"
-                style={{ width: "1.5rem" }}
-                alt=""
-              />
-            </a>
-          </div>
-          <div className="resume">
-            <a href="pdf/Arpit_Sharma_Resume.pdf" download="Arpit_Sharma_Resume.pdf" rel="noopener noreferrer" target="_blank">
-              <button className="px-5 text-sm py-2 w-[100%] lg:w-auto bg-black/80 text-white rounded-lg hover:bg-black/90 transition focus:ring-3 ring-black/40">
-                Resume
-                <Download />
-              </button>
-            </a>
-          </div>
-        </motion.div>
-        <div>
-          <motion.img
-            initial={{ x: 300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            src="Images/Arpit.jpg"
-            style={{ width: "24rem" }}
-            alt=""
-            className="rounded-full"
-          />
+        <div className="mt-7 space-x-3  ">
+          <Link
+            to="projects"
+            className="py-3 px-6 text-black/80 font-medium  bg-sky-400 rounded-xl text-sm border-2 border-sky-400 cursor-pointer"
+          >
+            View My Work
+          </Link>
+          <Link
+            to="footer"
+            className="py-3 px-6 text-sky-400 border-2 border-sky-400 font-medium  hover:bg-sky-400 hover:text-black/80 transition rounded-xl text-sm cursor-pointer"
+          >
+            Contact Me
+          </Link>
+        </div>
+
+        <div className="flex items-center cursor-pointer space-x-5 text-2xl mt-7">
+          <a href="https://github.com/arpitsharma418">
+            <FiGithub className="hover:text-sky-400 transition" />
+          </a>
+
+          <a href="https://linkedin.com/in/arpitsharma418">
+            <FiLinkedin className="hover:text-sky-400 transition" />
+          </a>
+
+          <a href="#">
+            <TbMessage className="text-3xl hover:text-sky-400 transition" />
+          </a>
         </div>
       </motion.div>
     </>

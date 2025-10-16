@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import OpenMenu from "@mui/icons-material/MenuRounded";
-import CloseMenu from "@mui/icons-material/Close";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GrClose } from "react-icons/gr";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
@@ -21,13 +21,13 @@ function Navbar() {
         </div>
         <div>
           <div
-            className="md:hidden p-1 text-white cursor-pointer"
+            className="md:hidden p-2 text-white cursor-pointer text-3xl"
             onClick={toggleMenu}
           >
             {isOpen ? (
-              <CloseMenu sx={{ fontSize: "30px" }} />
+              <GrClose/>
             ) : (
-              <OpenMenu sx={{ fontSize: "30px" }} />
+              <GiHamburgerMenu/>
             )}
           </div>
           <ul className={`hidden md:flex space-x-8 text-gray-400 items-center`}>
