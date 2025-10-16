@@ -43,7 +43,7 @@ function HeroSection() {
           </Link>
         </div>
 
-        <div className="flex items-center cursor-pointer space-x-5 text-2xl mt-7">
+        <div className="flex items-center cursor-pointer space-x-5 text-2xl mt-10">
           <a href="https://github.com/arpitsharma418">
             <FiGithub className="hover:text-sky-400 transition" />
           </a>

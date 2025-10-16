@@ -1,49 +1,107 @@
-import { motion } from "motion/react";
+import React from "react";
+import { motion } from "framer-motion";
+
+const frontendSkills = [
+  "React",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "TailwindCSS",
+  "Bootstrap",
+  "Redux",
+];
+const backendSkills = [
+  "Node.js",
+  "express.js",
+  "MongoDB",
+  "MySQL",
+  "REST APIs",
+];
+const tools = [
+  "Git",
+  "GitHub",
+  "MongoDB Atlas",
+  "Render",
+  "Vercel",
+  "VS code",
+  "Postman",
+];
+const Concepts = ["Java", "SQL", "Data Structures"];
 
 function AboutSection() {
   return (
     <>
       <motion.div
-        initial={{ scale: 0.8 }}
-        transition={{ duration: 0.3 }}
-        whileInView={{ scale: 1 }}
+        initial={{ opacity: 0, y: 300 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="bg-white flex justify-center items-center flex-wrap-reverse mt-20 lg:mt-40 p-10 lg:px-64 py-20"
+        className=""
       >
-        <div className="w-[100%] lg:w-[40%] hidden md:inline">
-          <motion.img
-            initial={{ x: -300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            src="Images/Arpit.jpg"
-            className="rounded-full"
-            style={{ width: "20rem" }}
-            alt=""
-          />
+        <h1 className="text-white text-5xl text-center font-bold">
+          About <span className="text-sky-400">Me</span>
+        </h1>
+        <span className="block mx-auto mt-2 h-2 w-30 rounded-b-sm bg-white"></span>
+
+        <div className="text-white flex md:flex-row flex-col justify-center mt-10 ">
+
+          <div className="mx-auto md:mx-2 w-[90%] md:w-[40%] bg-white/5 border-1 p-5 rounded-2xl border-white/20 mb-5 md:mb-0 ">
+            <h1 className="text-3xl font-bold opacity-70 my-3">Get to know me</h1>
+            <p className="mt-4 opacity-60">
+              I’m Arpit Sharma, a passionate Full Stack Developer (MERN) who loves building modern, user-friendly, and efficient web applications. I enjoy turning complex problems into simple, elegant solutions through clean code and creative design.
+            </p>
+            <p className="mt-4 opacity-60">
+              I’m always eager to learn new technologies, explore innovative ideas, and contribute to impactful projects. When I’m not coding, I enjoy exploring tech trends and enhancing my development skills.
+            </p>
+          </div>
+
+          <div className="mx-auto md:mx-2 w-[90%] md:w-[40%] p-5 border-1 border-white/20 bg-white/5 rounded-2xl mb-5 md:mb-0">
+          <h1 className="text-3xl opacity-70 font-bold my-3">My Skills</h1>
+            <h1 className="text-lg font-medium text-sky-400">Frontend</h1>
+            <ul className="flex gap-1 flex-wrap my-2">
+              {frontendSkills.map((skill) => {
+                return (
+                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                    {skill}
+                  </li>
+                );
+              })}
+            </ul>
+
+            <h1 className="text-lg font-medium text-sky-400">Backend</h1>
+            <ul className="flex gap-1 flex-wrap my-2">
+              {backendSkills.map((skill) => {
+                return (
+                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                    {skill}
+                  </li>
+                );
+              })}
+            </ul>
+
+            <h1 className="text-lg font-medium text-sky-400">Tools & Others</h1>
+            <ul className="flex gap-1 flex-wrap my-2">
+              {tools.map((tool) => {
+                return (
+                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                    {tool}
+                  </li>
+                );
+              })}
+            </ul>
+
+            <h1 className="text-lg font-medium text-sky-400">Concepts</h1>
+            <ul className="flex gap-1 flex-wrap my-2">
+              {Concepts.map((concept) => {
+                return (
+                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                    {concept}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
-        <motion.div
-          initial={{ x: 300, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-[100%] lg:w-[60%]"
-        >
-          <h1 className="lora-font text-5xl italic mb-5">About Me</h1>
-          <p>
-            Hi, I’m Arpit Sharma, a dedicated Full-Stack Developer with a strong
-            foundation in web technologies and software engineering principles.
-            I have hands-on experience working with the MERN Stack (MongoDB,
-            Express.js, React, Node.js) to create responsive, user-focused
-            applications. Currently, I am focused on advancing my expertise in
-            Data Structures & Algorithms to enhance my problem-solving and
-            coding efficiency. I am passionate about building scalable
-            solutions, learning modern technologies, and continuously improving
-            as a developer. My long-term goal is to contribute to impactful
-            projects, explore system design, and grow as a well-rounded software
-            engineer.
-          </p>
-        </motion.div>
       </motion.div>
     </>
   );
