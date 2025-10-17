@@ -5,7 +5,7 @@ const projects = [
     imgLink: "Images/Chatably.png",
 
     description:
-      "Developed a real-time chat app with message scheduling using React.js, Express.js, and MongoDB for full-stack communication functionality",
+      "Developed a real-time chat app with message scheduling using React.js, Express.js, and MongoDB for full-stack communication functionality.",
 
     skills: [
       "React",
@@ -27,7 +27,7 @@ const projects = [
     imgLink: "Images/Homigo.png",
 
     description:
-      "Developed a server side rendered property listing platform where user can list thier property online.",
+      "Developed a server-side rendered property listing platform that allows users to list and manage their properties online.",
 
     skills: [
       "EJS",
@@ -49,7 +49,7 @@ const projects = [
     imgLink: "Images/weatherProject.png",
 
     description:
-      "Developed a Weather Web App for real time weather details searching by City.",
+      "A simple weather app that shows real-time temperature, city name, and weather conditions using live API.",
 
     skills: [
       "React",
