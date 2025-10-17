@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import AboutSection from "./pages/AboutSection";
 import HeroSection from "./pages/HeroSection";
 import ProjectSection from "./pages/ProjectSection";
-import SkillSection from "./pages/SkillSection";
 
 function App() {
   return (
@@ -16,13 +15,10 @@ function App() {
         <AboutSection />
       </section>
 
-      <section id="skills">
-        <SkillSection />
+      <section id="projects">
+      <ProjectSection/>
       </section>
 
-      <section id="projects">
-        <ProjectSection />
-      </section>
       <section id="footer">
         <Footer />
       </section>

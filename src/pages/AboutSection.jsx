@@ -59,9 +59,9 @@ function AboutSection() {
           <h1 className="text-3xl opacity-70 font-bold my-3">My Skills</h1>
             <h1 className="text-lg font-medium text-sky-400">Frontend</h1>
             <ul className="flex gap-1 flex-wrap my-2">
-              {frontendSkills.map((skill) => {
+              {frontendSkills.map((skill, index) => {
                 return (
-                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                  <li key={index} className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
                     {skill}
                   </li>
                 );
@@ -70,9 +70,9 @@ function AboutSection() {
 
             <h1 className="text-lg font-medium text-sky-400">Backend</h1>
             <ul className="flex gap-1 flex-wrap my-2">
-              {backendSkills.map((skill) => {
+              {backendSkills.map((skill, index) => {
                 return (
-                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                  <li key={index} className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
                     {skill}
                   </li>
                 );
@@ -81,9 +81,9 @@ function AboutSection() {
 
             <h1 className="text-lg font-medium text-sky-400">Tools & Others</h1>
             <ul className="flex gap-1 flex-wrap my-2">
-              {tools.map((tool) => {
+              {tools.map((tool, index) => {
                 return (
-                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                  <li key={index} className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
                     {tool}
                   </li>
                 );
@@ -92,9 +92,9 @@ function AboutSection() {
 
             <h1 className="text-lg font-medium text-sky-400">Concepts</h1>
             <ul className="flex gap-1 flex-wrap my-2">
-              {Concepts.map((concept) => {
+              {Concepts.map((concept, index) => {
                 return (
-                  <li className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
+                  <li key={index} className="bg-white/10 rounded-full py-1 px-3 border-1 border-white/20 text-sm">
                     {concept}
                   </li>
                 );

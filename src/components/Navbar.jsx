@@ -53,7 +53,7 @@ function Navbar() {
             </li>
             <li key={3} className="hover:text-sky-500 transition">
               <Link
-                to="skills"
+                to="about"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer"
