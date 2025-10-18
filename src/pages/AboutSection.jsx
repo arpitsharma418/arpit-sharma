@@ -36,12 +36,12 @@ function AboutSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className=""
+        className="mt-16"
       >
-        <h1 className="text-white text-5xl text-center font-bold">
+        <h1 className="text-white text-3xl text-center font-semibold">
           About <span className="text-sky-400">Me</span>
         </h1>
-        <span className="block mx-auto mt-2 h-2 w-30 rounded-b-sm bg-white"></span>
+        <span className="block mx-auto mt-2 h-1 w-30 rounded-b-sm bg-white"></span>
 
         <div className="text-white flex md:flex-row flex-col justify-center mt-10 ">
 

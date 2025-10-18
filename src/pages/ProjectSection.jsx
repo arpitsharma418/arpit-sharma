@@ -7,25 +7,21 @@ import { motion } from "framer-motion";
 function ProjectSection() {
   return (
     <>
-      <div className="mt-30 lg:p-10">
-        <motion.h1
-          initial={{ opacity: 0, y: 300 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="text-white text-5xl text-center font-bold"
-        >
+      <motion.div
+        initial={{ opacity: 0, y: 300 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="mt-48 lg:p-10"
+      >
+        <h1 className="text-white text-3xl text-center font-semibold">
           My <span className="text-sky-400">Projects</span>
-        </motion.h1>
-        <span className="block mx-auto mt-2 h-2 w-30 rounded-b-sm bg-white mb-10"></span>
+        </h1>
+        <span className="block mx-auto mt-2 h-1 w-30 rounded-b-sm bg-white mb-10"></span>
 
         {projects.map((project, index) => {
           return (
-            <motion.div
-              initial={{ opacity: 0, y: 200 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
+            <div
               key={index}
               className="text-white lg:flex border-1 rounded-2xl border-white/20 gap-5 w-[90%] lg:w-[75%] mx-auto p-5 hover:border-sky-400 transition duration-200 mt-10"
             >
@@ -39,7 +35,7 @@ function ProjectSection() {
 
               <div className="w-full lg:w-[40%] flex flex-col justify-between">
                 <div>
-                  <h1 className="text-2xl font-semibold mb-2 mt-3 lg:mt-0 ">
+                  <h1 className="text-xl font-semibold mb-2 mt-3 lg:mt-0 ">
                     {project.name}
                   </h1>
                   <p className="text-wrap mb-3 opacity-70">
@@ -75,10 +71,10 @@ function ProjectSection() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
-      </div>
+      </motion.div>
     </>
   );
 }
