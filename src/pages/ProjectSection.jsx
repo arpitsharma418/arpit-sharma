@@ -12,18 +12,17 @@ function ProjectSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="mt-48 lg:p-10"
+        className="mt-30 lg:p-10"
       >
         <h1 className="text-white text-3xl text-center font-semibold">
-          My <span className="text-sky-400">Projects</span>
+          My Projects
         </h1>
-        <span className="block mx-auto mt-2 h-1 w-30 rounded-b-sm bg-white mb-10"></span>
 
         {projects.map((project, index) => {
           return (
             <div
               key={index}
-              className="text-white lg:flex border-1 rounded-2xl border-white/20 gap-5 w-[90%] lg:w-[75%] mx-auto p-5 hover:border-sky-400 transition duration-200 mt-10"
+              className="text-white lg:flex border-1 rounded-2xl border-white/20 gap-5 w-[90%] lg:w-[75%] mx-auto p-5 hover:border-white transition duration-200 mt-10"
             >
               <div className="w-full lg:w-[50%]">
                 <img
@@ -57,14 +56,14 @@ function ProjectSection() {
                 <div className="flex gap-5 mt-4 lg:mt-0">
                   <a
                     href={project.LiveLink}
-                    className="px-3 py-2 border-1 border-sky-400 rounded-xl flex justify-between items-center gap-3 text-sky-400 hover:bg-sky-400 hover:text-black transition cursor-pointer"
+                    className="px-3 py-2 rounded-xl flex justify-between items-center gap-3 text-black font-medium bg-green-500 hover:bg-green-600 transition cursor-pointer"
                   >
                     {" "}
-                    <RxExternalLink /> Live Demo
+                    <RxExternalLink /> Live demo
                   </a>
                   <a
                     href={project.githubLink}
-                    className="px-3 py-2 border-1 border-white rounded-xl flex justify-between items-center gap-3 hover:bg-white hover:text-black transition cursor-pointer"
+                    className="px-3 py-2 rounded-xl flex justify-between items-center gap-3 bg-white/20 hover:bg-white/10 transition cursor-pointer"
                   >
                     {" "}
                     <FiGithub /> Code

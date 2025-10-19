@@ -15,7 +15,7 @@ function Navbar() {
     <>
       <div className="w-full backdrop-blur-md flex justify-between items-center px-5 md:px-20 py-4 border-b-1 border-white/10 sticky top-0 z-40">
         <div>
-          <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent cursive">
             Arpit Sharma
           </h1>
         </div>
@@ -31,7 +31,7 @@ function Navbar() {
             )}
           </div>
           <ul className={`hidden md:flex space-x-8 text-gray-400 items-center`}>
-            <li key={1} className="hover:text-sky-500 transition">
+            <li key={1} className="hover:text-white transition">
               <Link
                 to="about"
                 smooth={true}
@@ -41,7 +41,7 @@ function Navbar() {
                 About
               </Link>
             </li>
-            <li key={2} className="hover:text-sky-500 transition">
+            <li key={2} className="hover:text-white transition">
               <Link
                 to="projects"
                 smooth={true}
@@ -51,7 +51,7 @@ function Navbar() {
                 Projects
               </Link>
             </li>
-            <li key={3} className="hover:text-sky-500 transition">
+            <li key={3} className="hover:text-white  transition">
               <Link
                 to="about"
                 smooth={true}
@@ -63,7 +63,7 @@ function Navbar() {
             </li>
             <li
               key={4}
-              className="hover:bg-sky-400 text-sky-400 hover:text-black transition p-2 border-2 border-sky-400 rounded-lg text-sm hidden md:inline cursor-pointer"
+              className="hover:bg-white text-white  hover:text-black transition p-2 border-2 border-white rounded-lg text-sm hidden md:inline cursor-pointer"
             >
               <Link to="footer" smooth={true} duration={500}  >Get in Touch</Link>
             </li>

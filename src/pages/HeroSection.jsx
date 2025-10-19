@@ -16,9 +16,9 @@ function HeroSection() {
         className="text-white min-h-[calc(100vh-72px)] flex flex-col justify-center items-center"
       >
         <div className="text-center w-[80%] lg:w-[38%]">
-          <p className="text-sky-300 mb-7 text-lg">Hi, my name is</p>
-          <h1 className="text-6xl font-bold mb-4">Arpit Sharma</h1>
-          <h2 className="text-4xl font-bold opacity-60">
+          <p className="text-white cursive mb-7 text-3xl">Hi, my name is</p>
+          <h1 className="text-6xl font-bold mb-4 bbh-font">Arpit Sharma</h1>
+          <h2 className="text-3xl font-semibold opacity-60">
             I craft powerful web experiences
           </h2>
           <p className="mt-5 font-medium text-wrap leading-7">
@@ -31,29 +31,29 @@ function HeroSection() {
         <div className="mt-7 space-x-3  ">
           <Link
             to="projects"
-            className="py-3 px-6 text-black/80 font-medium  bg-sky-400 rounded-xl text-sm border-2 border-sky-400 cursor-pointer"
+            className="py-3 px-6 text-black/80 font-medium  bg-white rounded-xl text-sm border-2 border-white cursor-pointer"
           >
             View My Work
           </Link>
           <Link
             to="footer"
-            className="py-3 px-6 text-sky-400 border-2 border-sky-400 font-medium  hover:bg-sky-400 hover:text-black/80 transition rounded-xl text-sm cursor-pointer"
+            className="py-3 px-6 text-white border-2 border-white font-medium  hover:bg-white hover:text-black/80 transition rounded-xl text-sm cursor-pointer"
           >
             Contact Me
           </Link>
         </div>
 
-        <div className="flex items-center cursor-pointer space-x-5 text-2xl mt-10">
+        <div className="flex items-center cursor-pointer space-x-5 text-2xl mt-14">
           <a href="https://github.com/arpitsharma418">
-            <FiGithub className="hover:text-sky-400 transition" />
+            <FiGithub className="hover:text-yellow-300 transition" />
           </a>
 
           <a href="https://linkedin.com/in/arpitsharma418">
-            <FiLinkedin className="hover:text-sky-400 transition" />
+            <FiLinkedin className="hover:text-yellow-300 transition" />
           </a>
 
-          <a href="#">
-            <TbMessage className="text-3xl hover:text-sky-400 transition" />
+          <a href="#" >
+            <TbMessage className="text-3xl hover:text-yellow-300 transition" />
           </a>
         </div>
       </motion.div>
