@@ -5,7 +5,7 @@ const projects = [
     imgLink: "Images/Chatably.png",
 
     description:
-      "Developed a real-time chat app with message scheduling using React.js, Express.js, and MongoDB for full-stack communication functionality.",
+      "Developed a real-time chat app using React.js, Express.js, and MongoDB for full-stack communication functionality.",
 
     skills: [
       "React",
@@ -20,28 +20,6 @@ const projects = [
     githubLink: "https://github.com/arpitsharma418/chatably",
 
     LiveLink: "https://chatably.onrender.com/",
-  },
-  {
-    name: "Homigo - A property listing platform",
-
-    imgLink: "Images/Homigo.png",
-
-    description:
-      "Developed a server-side rendered property listing platform that allows users to list and manage their properties online.",
-
-    skills: [
-      "EJS",
-      "Bootstrap",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Render",
-      "Passport.js"
-    ],
-
-    githubLink: "https://github.com/arpitsharma418",
-
-    LiveLink: "https://homigo-biw1.onrender.com/listing",
   },
   {
     name: "Weather Web App",
@@ -78,6 +56,40 @@ const projects = [
     githubLink: "https://github.com/arpitsharma418/arpit-sharma",
 
     LiveLink: "https://arpit-sharma-rho.vercel.app/",
+  },
+  {
+    name: "Random Color Generator",
+
+    imgLink: "Images/rcg.png",
+
+    description:
+      "Developed a Random Color Generator using HTML, CSS and JavaScript.",
+
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+
+    githubLink: "https://github.com/arpitsharma418/random-color-Generator",
+
+    LiveLink: "#",
+  },
+  {
+    name: "To do List",
+
+    imgLink: "Images/todolist.png",
+
+    description:
+      "Developed a To-do List using React.js",
+
+    skills: [
+      "React",
+    ],
+
+    githubLink: "https://github.com/arpitsharma418/todolist",
+
+    LiveLink: "#",
   },
 ];
 
