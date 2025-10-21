@@ -61,6 +61,24 @@ const projects = [
 
     LiveLink: "#",
   },
+  {
+    name: "Portfolio website",
+
+    imgLink: "Images/portfolio.png",
+
+    description:
+      "A responsive personal portfolio website built with React.js, featuring smooth Framer Motion animations and React icons for a modern UI.",
+
+    skills: [
+      "React",
+      "Framer motion",
+      "React Icons"
+    ],
+
+    githubLink: "https://github.com/arpitsharma418/arpit-sharma",
+
+    LiveLink: "https://arpit-sharma-rho.vercel.app/",
+  },
 ];
 
 export default projects;
